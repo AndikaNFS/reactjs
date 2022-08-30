@@ -1,13 +1,16 @@
-// import logo from './logo.svg';
-import './App.css';
+// import React from 'react';
+import "assets/css/app.css";
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+
+import HomePage from 'pages/HomePage';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1 className="text-3xl font-bold underline"> Hello gan!</h1>
-        <a className="text-sm no-underline">Mantap</a>
-      </header>
+      <Router>
+        <Route path="/" component={HomePage} />
+      </Router>
     </div>
   );
 }
